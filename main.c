@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 13:23:11 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/15 15:23:05 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ int		memcmp(const void *s1, const void *s2, size_t n);
 
 //----- 20 ~ 21//
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+int		ft_atoi(const char *str);
+
+//----- 22 ~ 23//
+void	*ft_calloc(size_t count, size_t size);
 
 int	main(void)
 {
@@ -266,6 +270,38 @@ int	main(void)
 	printf("\n");
 
 	printf("===ft_atoi()===\n");
+	char arr_atoi1[] = "seoul";
+	char arr_atoi2[] = "42";
+	char arr_atoi3[] = "42seoul";
+	char arr_atoi4[] = "seoul42";
+	char arr_atoi5[] = "+42";
+	char arr_atoi6[] = "-42";
+	char arr_atoi7[] = "++42";
+	char arr_atoi8[] = "--42";
+	printf("atoi()_input : s1 = %s, s2 = %s, s3 = %s, s4 = %s, s5 = %s, s6 = %s, s7 = %s, s8 = %s\n",
+	arr_atoi1, arr_atoi2, arr_atoi3, arr_atoi4, arr_atoi5, arr_atoi6, arr_atoi7, arr_atoi8);
+	printf("atoi()_return : s1 = %d, s2 = %d, s3 = %d, s4 = %d, s5 = %d, s6 = %d, s7 = %d, s8 = %d\n",
+	atoi(arr_atoi1), atoi(arr_atoi2), atoi(arr_atoi3), atoi(arr_atoi4), atoi(arr_atoi5), atoi(arr_atoi6), atoi(arr_atoi7), atoi(arr_atoi8));
+
+	printf("ft_atoi()_input : s1 = %s, s2 = %s, s3 = %s, s4 = %s, s5 = %s, s6 = %s, s7 = %s, s8 = %s\n",
+	arr_atoi1, arr_atoi2, arr_atoi3, arr_atoi4, arr_atoi5, arr_atoi6, arr_atoi7, arr_atoi8);
+	printf("ft_atoi()_return : s1 = %d, s2 = %d, s3 = %d, s4 = %d, s5 = %d, s6 = %d, s7 = %d, s8 = %d\n",
+	ft_atoi(arr_atoi1), ft_atoi(arr_atoi2), ft_atoi(arr_atoi3), ft_atoi(arr_atoi4), ft_atoi(arr_atoi5), ft_atoi(arr_atoi6), ft_atoi(arr_atoi7), ft_atoi(arr_atoi8));
+	printf("\n");
+
+	//----- 22 ~ 23//
+	printf("===ft_calloc()===\n");
+	int *calloc1 = (int *)calloc(5, sizeof(int)); //할당
+    printf("calloc(5, sizeof(int)) : %d %d %d %d %d\n", calloc1[0], calloc1[1], calloc1[2], calloc1[3], calloc1[4]);
+    
+    int *calloc2 = (int *)ft_calloc(5, sizeof(int)); //할당
+    printf("ft_calloc(5, sizeof(int)) : %d %d %d %d %d\n", calloc2[0], calloc2[1], calloc2[2], calloc1[3], calloc1[4]);
+	free(calloc1); //메모리 해제
+    free(calloc2); //메모리 해제
+	printf("\n");
+
+	printf("===ft_strdup()===\n");
+	printf("\n");
 	
 	return 0;
 }
