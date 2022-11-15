@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 16:10:21 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/15 16:33:33 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char	*ft_strdup(const char *s1);
 // Part 2
 //===========//
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 int	main(void)
 {
@@ -324,6 +325,14 @@ int	main(void)
 	printf("===ft_substr()===\n");
 	char arr_substr[] = "substrTEST";
 	printf("ft_substr() input : %s, result = %s\n", arr_substr, ft_substr(arr_substr, 6, 4));
-	
+	printf("\n");
+
+	printf("===ft_strjoin()===\n");
+	char arr_strjoin1[] = "strjoin";
+	char arr_strjoin2[] = "TEST";
+	printf("ft_strjoin(\"%s\", \"%s\") : result = %s\n", arr_strjoin1, arr_strjoin2, ft_strjoin(arr_strjoin1, arr_strjoin2));
+
+	printf("===ft_strtrim()===\n");
+
 	return 0;
 }
