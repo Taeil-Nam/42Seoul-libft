@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 15:38:06 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/15 16:10:21 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 #include <ctype.h>
 #include <string.h>
 
+//===========//
+// Part 1
+//===========//
 //----- 0 ~ 5//
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -54,8 +57,16 @@ int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 
+//===========//
+// Part 2
+//===========//
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 int	main(void)
 {
+	//===========//
+	// Part 1
+	//===========//	
 	//----- 0 ~ 5//
 	printf("===ft_isalpha()===\n");
 	for (int i = 0; i <= 127; i++)
@@ -306,6 +317,13 @@ int	main(void)
 	printf("strdup() input : %s, result = %s\n", arr_strdup, strdup(arr_strdup));
 	printf("ft_strdup() input : %s, result = %s\n", arr_strdup, ft_strdup(arr_strdup));
 	printf("\n");
+
+	//===========//
+	// Part 2
+	//===========//
+	printf("===ft_substr()===\n");
+	char arr_substr[] = "substrTEST";
+	printf("ft_substr() input : %s, result = %s\n", arr_substr, ft_substr(arr_substr, 6, 4));
 	
 	return 0;
 }
