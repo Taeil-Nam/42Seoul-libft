@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/10 21:24:52 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/15 11:53:43 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 //----- 18 ~ 19//
-
+void	*ft_memchr(const void *s, int c, size_t n);
 
 int	main(void)
 {
@@ -234,7 +234,14 @@ int	main(void)
 	printf("\n");
 	
 	//----- 18 ~ 19//
-	
+	printf("===ft_memchr()===\n");
+	char arr_memchr[] = "hello World!";
+	printf("memchr()_input : %s, find : 'o'\n", arr_memchr);
+	printf("memchr()_return : %p\n", memchr(arr_memchr, 'o', strlen(arr_memchr)));
+
+	printf("ft_memchr()_input : %s, find : 'o'\n", arr_memchr);
+	printf("ft_memchr()_return : %p\n", ft_memchr(arr_memchr, 'o', strlen(arr_memchr)));
+	printf("\n");
 	
 	return 0;
 }
