@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 21:04:12 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/15 22:00:30 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -362,7 +362,28 @@ int	main(void)
 	printf("\n");
 	
 	printf("===ft_strmapi()===\n");
+	printf("Pass\n");
+	printf("\n");
 	
+	printf("===ft_striteri()===\n");
+	printf("Pass\n");
+	printf("\n");
 	
+	printf("===ft_putchar_fd()===\n");
+	ft_putchar_fd('4', 1);
+	printf("\n\n");
+
+	printf("===ft_putstr_fd()===\n");
+	ft_putstr_fd("42", 1);
+	printf("\n\n");
+
+	printf("===ft_putendl_fd()===\n");
+	ft_putendl_fd("42", 1);
+	printf("\n\n");
+
+	printf("===ft_putnbr_fd()===\n");
+	ft_putnbr_fd(424242, 1);
+	printf("\n\n");
+
 	return 0;
 }
