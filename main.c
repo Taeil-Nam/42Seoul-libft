@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 15:23:05 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/15 15:38:06 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int		ft_atoi(const char *str);
 
 //----- 22 ~ 23//
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
 
 int	main(void)
 {
@@ -301,6 +302,9 @@ int	main(void)
 	printf("\n");
 
 	printf("===ft_strdup()===\n");
+	char arr_strdup[] = "strdupTEST";
+	printf("strdup() input : %s, result = %s\n", arr_strdup, strdup(arr_strdup));
+	printf("ft_strdup() input : %s, result = %s\n", arr_strdup, ft_strdup(arr_strdup));
 	printf("\n");
 	
 	return 0;
