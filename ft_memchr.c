@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:26:22 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 11:48:49 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/15 11:58:00 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t		i;
-	void	*result;
+	void		*result;
 
 	result = 0;
 	i = 0;
