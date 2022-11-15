@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 19:49:36 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/15 21:04:12 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -355,7 +355,13 @@ int	main(void)
 	printf("\n");
 	
 	printf("===ft_itoa()===\n");
+	char *itoa;
+	int itoa_input = 4242;
+	itoa = ft_itoa(itoa_input);
+	printf("input = %d, result = %s\n", itoa_input, itoa);
+	printf("\n");
 	
+	printf("===ft_strmapi()===\n");
 	
 	
 	return 0;
