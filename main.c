@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 11:56:27 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/15 12:23:54 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 //----- 18 ~ 19//
 void	*ft_memchr(const void *s, int c, size_t n);
+int		memcmp(const void *s1, const void *s2, size_t n);
 
 int	main(void)
 {
@@ -244,6 +245,11 @@ int	main(void)
 	printf("\n");
 
 	printf("===ft_memcmp()===\n");
+	printf("memcmp()_input : s1 = %s, s2 = %s\n", "hello World!", "hello World!");
+	printf("memcmp()_return : %d\n", memcmp("hello World!", "hello World!", 13));
+	
+	printf("ft_memcmp()_input : s1 = %s, s2 = %s\n", "hello World!", "hello World!");
+	printf("ft_memcmp()_return : %d\n", memcmp("hello World!", "hello World!", 13));
 	
 	printf("\n");
 	
