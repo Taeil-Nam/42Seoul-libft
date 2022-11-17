@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/17 19:07:28 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 21:22:03 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -314,8 +314,8 @@ int	main(void)
 
 	printf("===ft_split()===\n");
 	char** split;
-
-	split = ft_split("          ", ' ');
+	
+	split = ft_split("      split       this for   me  !       ", ' ');
 	for (int i = 0; split[i]; i++)
 		printf("i = %d, result = %s\n", i, split[i]);
 	printf("\n");

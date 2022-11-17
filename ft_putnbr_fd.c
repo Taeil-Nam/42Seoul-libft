@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:54:05 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 21:57:18 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 21:50:48 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void	ft_putnbr_recursion(long long n, int fd)
+{
+	char	c;
+
+	if (n >= 10)
+		ft_putnbr_recursion(n / 10, fd);
+	c = (n % 10) + '0';
+	write(fd, &c, 1);
+}
+
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*convert_str;
-	size_t	len;
+	long long	n_l;
 
-	convert_str = ft_itoa(n);
-	len = ft_strlen(convert_str);
-	write(fd, convert_str, len);
+	n_l = (long long)n;
+	if (n < 0)
+	{
+		n_l *= -1;
+		write(fd, "-", 1);
+	}
+	ft_putnbr_recursion(n_l, fd);
 }

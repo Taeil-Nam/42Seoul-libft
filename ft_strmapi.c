@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:04:56 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 21:46:32 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 21:25:26 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	len = ft_strlen(s);
 	result = (char *)malloc((len * sizeof(char) + 1));
+	if (result == 0)
+		return (0);
 	i = 0;
 	while (i < len)
 	{
