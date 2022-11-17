@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/17 21:22:03 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 22:35:25 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,19 +158,19 @@ int	main(void)
 	printf("\n");
 
 	printf("===ft_strlcat()===\n");
-	char arr_src_strlcat[] = "!!!";
-	char arr_dst_strlcat[11] = "strlcat";
+	char arr_src_strlcat[] = "1";
+	char arr_dst_strlcat[11] = "";
 	printf("strlcat()_before : %s\n", arr_dst_strlcat);
 
-	int return_strlcat = strlcat(arr_dst_strlcat, arr_src_strlcat, 11);
+	int return_strlcat = strlcat((void *)0, arr_src_strlcat, 1);
 	printf("strlcat()_after : %s\n", arr_dst_strlcat);
 	printf("strlcat()_return : %d\n", return_strlcat);
 
-	char arr2_src_strlcat[] = "!!!";
-	char arr2_dst_strlcat[11] = "strlcat";
+	char arr2_src_strlcat[] = "1";
+	char arr2_dst_strlcat[11] = "";
 	printf("ft_strlcat()_before : %s\n", arr2_dst_strlcat);
 
-	int return_ft_strlcat = ft_strlcat(arr2_dst_strlcat, arr2_src_strlcat, 11);
+	int return_ft_strlcat = ft_strlcat((void *)0, arr2_src_strlcat, 0);
 	printf("ft_strlcat()_after : %s\n", arr2_dst_strlcat);
 	printf("ft_strlcat()_return : %d\n", return_ft_strlcat);
 	printf("\n");
