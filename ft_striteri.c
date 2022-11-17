@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:22:46 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 21:46:18 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 17:56:20 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (i < len)
 	{
-		f(i, s);
+		f(i, &s[i]);
 		i++;
 	}
 }

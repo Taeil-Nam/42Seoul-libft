@@ -6,25 +6,22 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 20:16:07 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 11:39:08 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 17:26:26 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
-	char	*result;
 
-	result = 0;
-	i = 0;
-	while (s[i] != '\0')
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
 		if (s[i] == c)
-		{
-			result = (char *)&s[i];
-			break ;
-		}
-		i++;
+			return ((char *)&s[i]);
+		i--;
 	}
-	return (result);
+	return (0);
 }

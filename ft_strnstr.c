@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:34:47 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 17:42:38 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 17:34:23 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	isin(const char *h, const char *n, size_t h_i, size_t len)
 	int	n_i;
 
 	n_i = 0;
-	while (h_i < len)
+	while (h_i < len && h[h_i])
 	{
 		if (n[n_i] == '\0')
 			return (1);
@@ -40,7 +40,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	is_in = 0;
 	if (needle[0] == '\0')
 		return ((char *)&haystack[i]);
-	while (i < len)
+	while (i < len && haystack[i])
 	{
 		if (haystack[i] == needle[0])
 			is_in = isin(haystack, needle, i, len);

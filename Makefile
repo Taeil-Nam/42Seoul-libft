@@ -6,7 +6,7 @@
 #    By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/17 11:12:32 by tnam              #+#    #+#              #
-#    Updated: 2022/11/17 13:32:08 by tnam             ###   ########.fr        #
+#    Updated: 2022/11/17 14:46:41 by tnam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRCS_M			= ft_strlcpy.c		\
 				  ft_strdup.c		\
 				  ft_substr.c		\
 				  ft_strjoin.c		\
+				  ft_striteri.c		\
 				  ft_strtrim.c		\
 				  ft_split.c		\
 				  ft_itoa.c			\

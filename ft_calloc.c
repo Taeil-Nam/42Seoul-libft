@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 14:57:53 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 15:26:16 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 15:18:28 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t count, size_t size)
 	if (result == 0)
 		return (0);
 	i = 0;
-	while (i <= count * size)
+	while (i < count * size)
 	{
 		((unsigned char *)result)[i] = 0;
 		i++;

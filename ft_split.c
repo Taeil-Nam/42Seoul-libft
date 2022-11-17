@@ -6,107 +6,84 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:05:32 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 19:46:11 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 19:25:31 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-char	*ft_change_to_null(char *str, char *charset, int str_len)
+char	*ft_str_to_null(char const *str, char c, int str_len)
 {
 	int		i;
-	int		j;
 	char	*str_to_null;
 
+	str_to_null = ft_strdup(str);
 	i = 0;
-	j = 0;
-	str_to_null = (char *)malloc(sizeof(char) * str_len + 1);
-	if (str_to_null == 0)
-		return (0);
 	while (i < str_len)
 	{
-		str_to_null[i] = str[i];
-		while (charset[j] != '\0')
-		{
-			if (str[i] == charset[j++])
-			{
-				str_to_null[i] = '\0';
-				break ;
-			}
-		}
-		j = 0;
+		if (str_to_null[i] == c)
+			str_to_null[i] = '\0';
 		i++;
 	}
-	str_to_null[str_len] = '\0';
 	return (str_to_null);
 }
 
-int	ft_str_count(char *str_to_null, int str_len)
+int	ft_sub_str_count(char *str_to_null, int str_len)
 {
+	int	sub_str_count;
 	int	i;
-	int	str_count;
 
+	sub_str_count = 0;
 	i = 0;
-	str_count = 0;
 	while (i < str_len)
 	{
-		if (str_to_null[i] != '\0' && str_to_null[i + 1] == '\0')
-			str_count += 1;
+		if ((str_to_null[i] != '\0') && (str_to_null[i + 1] == '\0'))
+			sub_str_count++;
 		i++;
 	}
-	return (str_count);
+	return (sub_str_count);
 }
 
-void	ft_div_str(char **result, char *str_to_null, int total_len, int i)
+void	ft_split_str(char *str_to_null, int str_len, char **result)
 {
-	int	row;
-	int	col;
-	int	str_len;
+	int		i;
+	int		sub_str_count;
+	char	*sub_str;
 
-	row = 0;
-	col = 0;
-	str_len = 0;
-	while (i <= total_len)
+	i = 0;
+	sub_str_count = 0;
+	while (i < str_len)
 	{
 		if (str_to_null[i] != '\0')
-			str_len += 1;
-		if (i != 0 && str_to_null[i] == '\0' && str_to_null[i - 1] != '\0')
 		{
-			result[row] = (char *)malloc(sizeof(char) * str_len + 1);
-			if (result[row] == 0)
-				return ;
-			while (i - str_len < i)
-				result[row][col++] = str_to_null[i - str_len--];
-			result[row++][col] = '\0';
-			col = 0;
-			str_len = 0;
+			sub_str = ft_strdup(&str_to_null[i]);
+			result[sub_str_count++] = sub_str;
+			result[sub_str_count] = 0;
+			i += ft_strlen(sub_str);
 		}
 		i++;
 	}
-	result[row] = 0;
 }
 
-char	**ft_split(char *str, char *charset)
+char	**ft_split(char const *s, char c)
 {
 	int		str_len;
-	int		str_count;
+	int		sub_str_count;
 	char	*str_to_null;
 	char	**result;
 
-	str_len = ft_strlen(str);
-	str_to_null = ft_change_to_null(str, charset, str_len);
-	str_count = ft_str_count(str_to_null, str_len);
-	if (str_count == 0)
-	{
-		result = (char **)malloc(1);
-		if (result == 0)
-			return (0);
-		*result = 0;
-		return (result);
-	}
-	result = (char **)malloc(sizeof(char *) * str_count + 1);
+	str_len = ft_strlen(s);
+	str_to_null = ft_str_to_null(s, c, str_len);
+	sub_str_count = ft_sub_str_count(str_to_null, str_len);
+	result = (char **)malloc((sub_str_count * sizeof(char *) + sizeof(char *)));
 	if (result == 0)
 		return (0);
-	ft_div_str(result, str_to_null, str_len, 0);
+	if (sub_str_count == 0)
+	{
+		result[0] = 0;
+		return (result);
+	}
+	ft_split_str(str_to_null, str_len, result);
 	return (result);
 }

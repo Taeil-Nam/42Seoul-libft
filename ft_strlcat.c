@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 18:59:42 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 17:42:23 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 16:21:19 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst_len = ft_strlen(dst);
 	i = dst_len;
 	j = 0;
-	if (dstsize != 0)
+	if (dst_len <= dstsize)
 	{
-		while (i < dstsize - 1)
+		while (src[j] && (dst_len + j + 1 < dstsize))
 		{
-			dst[i] = src[j];
-			i++;
-			j++;
+			dst[i++] = src[j++];
 		}
-	}
-	dst[i] = '\0';
-	if (dst_len > dstsize)
-		return (dstsize + src_len);
-	else
+		dst[i] = '\0';
 		return (dst_len + src_len);
+	}
+	else
+		return (dstsize + src_len);
 }

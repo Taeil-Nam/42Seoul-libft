@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:23:17 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/17 13:22:07 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 19:07:28 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,20 @@
 #include <ctype.h>
 #include <string.h>
 #include "libft.h"
+
+void    iter(unsigned int i, char *c)
+{
+        static int indexArray[11] = {0};
+
+        if (i > 10 || indexArray[i] == 1)
+                write(1, "wrong index\n", 12);
+        else
+                indexArray[i] = 1;
+        if (*c >= 'a' && *c <= 'z')
+                *c = *c - 32;
+        else if (*c >= 'A' && *c <= 'Z')
+                *c = *c + 32;
+}
 
 int	main(void)
 {
@@ -210,6 +224,7 @@ int	main(void)
 	//----- 18 ~ 19//
 	printf("===ft_memchr()===\n");
 	char arr_memchr[] = "hello World!";
+	
 	printf("memchr()_input : %s, find : 'o'\n", arr_memchr);
 	printf("memchr()_return : %p\n", memchr(arr_memchr, 'o', strlen(arr_memchr)));
 
@@ -300,7 +315,7 @@ int	main(void)
 	printf("===ft_split()===\n");
 	char** split;
 
-	split = ft_split("12 345 6789", " ");
+	split = ft_split("          ", ' ');
 	for (int i = 0; split[i]; i++)
 		printf("i = %d, result = %s\n", i, split[i]);
 	printf("\n");
@@ -335,6 +350,7 @@ int	main(void)
 	printf("===ft_putnbr_fd()===\n");
 	ft_putnbr_fd(424242, 1);
 	printf("\n\n");
+
 
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 11:26:22 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 11:58:00 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/17 15:37:47 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (((unsigned char *)s)[i] == c)
+		if (((char *)s)[i] == c)
 		{
 			result = (void *)&s[i];
 			break ;
