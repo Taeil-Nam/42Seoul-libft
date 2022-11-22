@@ -6,14 +6,14 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 17:33:00 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/22 13:52:42 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/22 15:52:04 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
+# define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
-# define LIBFT_H
 
 typedef struct s_list
 {
