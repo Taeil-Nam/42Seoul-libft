@@ -6,7 +6,7 @@
 #    By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/17 11:12:32 by tnam              #+#    #+#              #
-#    Updated: 2022/11/17 19:34:06 by tnam             ###   ########.fr        #
+#    Updated: 2022/11/22 18:17:11 by tnam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,14 @@ SRCS_B			= ft_lstnew.c		\
 OBJS_M			= $(SRCS_M:.c=.o)
 OBJS_B			= $(SRCS_B:.c=.o)
 
-all : $(NAME)
+all: $(NAME)
+
+bonus: $(NAME)
+
+BONUS_MODE := $(findstring $(MAKECMDGOALS),bonus)
+
+$(NAME): $(OBJS_M) $(if $(BONUS_MODE),$(OBJS_B))
+	$(AR) $(ARFLAG) $@ $^
 
 %.o : %.c
 	$(CC) $(CFLAG) -c $< -o $@
@@ -84,11 +91,5 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
-
-$(NAME) : $(OBJS_M)
-	$(AR) $(ARFLAG) $@ $^
-
-bonus : $(OBJS_M) $(OBJS_B)
-	$(AR) $(ARFLAG) $(NAME) $^
 
  .PHONY : all clean fclean re

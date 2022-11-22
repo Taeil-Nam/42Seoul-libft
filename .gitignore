@@ -1,5 +1,9 @@
 .normignore
+
 .gitignore
+
 .DS_Store
+
 a.out
+
 main.c
