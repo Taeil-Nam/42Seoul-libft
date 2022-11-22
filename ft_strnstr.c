@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:34:47 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/17 17:34:23 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/22 14:26:07 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ int	isin(const char *h, const char *n, size_t h_i, size_t len)
 	int	n_i;
 
 	n_i = 0;
-	while (h_i < len && h[h_i])
+	while (h_i < len)
 	{
 		if (n[n_i] == '\0')
 			return (1);
+		if (h[h_i] == '\0')
+			return (0);
 		if (h[h_i] != n[n_i])
 			return (0);
 		if ((n[n_i + 1] != '\0') && (h_i + 1 == len))

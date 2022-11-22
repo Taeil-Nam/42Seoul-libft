@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:05:32 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/17 22:03:17 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/22 14:49:54 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,10 @@ char	**ft_split(char const *s, char c)
 	str_len = ft_strlen(s);
 	str_to_null = ft_str_to_null(s, c, str_len);
 	if (str_to_null == 0)
+	{
 		return (0);
+		free(str_to_null);
+	}
 	sub_str_count = ft_sub_str_count(str_to_null, str_len);
 	result = (char **)malloc((sub_str_count * sizeof(char *) + sizeof(char *)));
 	if (result == 0)
@@ -89,8 +92,10 @@ char	**ft_split(char const *s, char c)
 	if (sub_str_count == 0)
 	{
 		result[0] = 0;
+		free(str_to_null);
 		return (result);
 	}
 	result = ft_split_str(str_to_null, str_len, result);
+	free(str_to_null);
 	return (result);
 }

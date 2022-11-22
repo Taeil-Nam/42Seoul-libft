@@ -5,8 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/17 19:36:06 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/17 19:36:07 by tnam             ###   ########.fr       */
+/*   Created: 2022/11/22 10:45:50 by tnam              #+#    #+#             */
+/*   Updated: 2022/11/22 12:23:53 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (!new)
+		return ;
+	new->next = *lst;
+	*lst = new;
+}

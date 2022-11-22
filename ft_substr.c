@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:48:43 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/17 21:18:38 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/22 14:31:14 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (0);
-	result = (char *)malloc((len * sizeof(char)) + 1);
+	if (len < ft_strlen(s))
+		result = (char *)malloc((len * sizeof(char)) + 1);
+	else
+		result = (char *)malloc((ft_strlen(s) * sizeof(char)) + 1);
 	if (result == 0)
 		return (0);
 	i = 0;
