@@ -6,11 +6,11 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 15:42:09 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/22 18:03:38 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/22 22:24:37 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>	
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

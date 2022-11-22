@@ -6,13 +6,11 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:23:42 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 15:37:03 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/22 22:27:10 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {

@@ -6,12 +6,11 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:05:32 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/22 14:49:54 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/22 22:25:29 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_str_to_null(char const *str, char c, int str_len)
 {

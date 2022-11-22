@@ -6,11 +6,11 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:34:47 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/22 14:26:07 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/22 22:25:51 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	isin(const char *h, const char *n, size_t h_i, size_t len)
 {

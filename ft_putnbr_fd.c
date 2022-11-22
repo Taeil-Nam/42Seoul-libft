@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 21:54:05 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/17 21:50:48 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/22 22:26:40 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	long long	n_l;
 
+	if (fd < 0)
+		return ;
 	n_l = (long long)n;
 	if (n < 0)
 	{
