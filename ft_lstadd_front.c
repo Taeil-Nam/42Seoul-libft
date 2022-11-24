@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 10:45:50 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/22 12:23:53 by tnam             ###   ########.fr       */
+/*   Updated: 2022/11/24 14:49:18 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!new)
+	if (!lst || !new)
 		return ;
 	new->next = *lst;
 	*lst = new;
