@@ -6,7 +6,7 @@
 #    By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/17 11:12:32 by tnam              #+#    #+#              #
-#    Updated: 2022/11/24 14:55:30 by tnam             ###   ########.fr        #
+#    Updated: 2022/11/28 11:20:11 by tnam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,4 +92,4 @@ fclean : clean
 
 re : fclean all
 
- .PHONY : all clean fclean re
+.PHONY : all clean fclean re
