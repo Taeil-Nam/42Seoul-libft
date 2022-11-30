@@ -6,13 +6,13 @@
 #    By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/17 11:12:32 by tnam              #+#    #+#              #
-#    Updated: 2022/11/28 11:20:11 by tnam             ###   ########.fr        #
+#    Updated: 2022/11/30 11:52:15 by tnam             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			= libft.a
 
-CC				= gcc
+CC				= cc
 CFLAG			= -Wall -Wextra -Werror
 
 RM				= rm -f
@@ -92,4 +92,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus
