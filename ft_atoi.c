@@ -6,16 +6,18 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 13:24:51 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/15 14:02:58 by tnam             ###   ########.fr       */
+/*   Updated: 2023/01/30 13:05:36 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	sign;
-	int	sign_count;
-	int	result;
+	size_t	i;
+	int		sign;
+	int		sign_count;
+	int		result;
 
 	i = 0;
 	sign = 1;
@@ -33,8 +35,6 @@ int	ft_atoi(const char *str)
 			return (0);
 	}
 	while ('0' <= str[i] && str[i] <= '9')
-	{
 		result = (result * 10) + (str[i++] - '0');
-	}
 	return (sign * result);
 }

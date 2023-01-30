@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:40:28 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/30 11:26:58 by tnam             ###   ########.fr       */
+/*   Updated: 2023/01/30 14:28:07 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start;
-	int		end;
+	size_t	start;
+	size_t	end;
 	char	*result;
 
 	start = 0;

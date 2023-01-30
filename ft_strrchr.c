@@ -6,7 +6,7 @@
 /*   By: tnam <tnam@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 20:16:07 by tnam              #+#    #+#             */
-/*   Updated: 2022/11/24 14:54:45 by tnam             ###   ########.fr       */
+/*   Updated: 2023/01/30 15:36:42 by tnam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	int	i;
 
 	i = ft_strlen(s);
 	while (i >= 0)
