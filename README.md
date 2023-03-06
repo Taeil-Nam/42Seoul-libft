@@ -11,6 +11,10 @@
 - 메모리 누수(Memory Leak).
 - 단일 연결리스트(Singly Linked List).
 
-## 사용법
+## 개발 및 테스트 환경
+- Intel CPU 기반 Mac.
+- MacOS Version = 12.6.2
+
+## 사용 방법
 - make : 연결리스트 관련 함수는 제외하여 libft.a 라이브러리 생성.
 - make bonus : 연결리스트 관련 함수까지 포함하여 libft.a 라이브러리 생성.
